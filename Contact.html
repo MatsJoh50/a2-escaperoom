@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>[ESC] Escape Rooms</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+    <script type = "module" src='main.js' defer></script>
+    <script type = "module" src='modules.js' defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper">
+            <div class="header__logo" alt="Escape's logo formed by letters E S C"></div>
+            <div class="header__title">
+                <h1>Hacker Escape Rooms</h1>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="nav__large">
+        <ul>
+            <a href="./filter.htm?online">
+                <li class="Online">Play online</li>
+            </a>
+            <a href="./filter.htm?onsite">
+                <li class="OnSite">Play on-site</li>
+            </a>
+            <a href="./index.html#theStory">
+                <li>The story</li>
+            </a>
+            <a href="./index.html#footer">
+                <li>Contact us</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="nav__mobile">
+        <img class="nav__mobile--openMenu" src="images/openMenu.png">
+        <div class="nav__mobile--bg"></div>
+        <div class="nav__mobile--menu">
+            <ul>
+                <a href="./filter.htm?online" class="hamburgerLink">
+                    <li class="Online">Play online</li>
+                </a>
+                <a href="./filter.htm?onsite" class="hamburgerLink">
+                    <li class="OnSite">Play on-site</li>
+                </a>
+                <a href="#theStory" class="hamburgerLink">
+                    <li>The story</li>
+                </a>
+                <a href="#footer" class="hamburgerLink">
+                    <li>Contact us</li>
+                </a>
+            </ul>
+            <img class="nav__mobile--closeMenu" src="images/close.png" alt="menu close button">
+        </div>
+    </div>
+
+    <img class="heroImage" src="images/header__spacer.png"
+        alt="omnius Hero picture of a man standing by several screens">
+
+    
+
+        <section class="story">
+            <h1 class=contact>Contact us</h1>
+            <div class="container">
+              <form>
+                <input type="text" id="fname" name="name" placeholder="Your name..">
+            
+              
+                <input type="text" id="lname" name="Email" placeholder="Your Email..">
+            
+                <label for="type">Challenge type</label>
+                <select id="type" name="type">
+                  <option value="Online-challenge">Online-challenge</option>
+                  <option value="Onsite-Challenge">Onsite-Challenge</option>
+                </select>
+            
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+              </form>
+            
+            
+    
+        </div>
+    
+            
+            <a class="button primary" href="index.html">Back to main page</a>
+        </section>
+    
+         <a class="button primary" href="challenges.html?type=online">Back to challenges</a>
+            </div>
+            </div>
+        </section>
+    
+    
+    
+    
+
+
+
+        
+
+    <footer class="footer" id="footer">
+        <div class="footer__compay">
+            <h4>[Esc] Hacker Escape Rooms</h4>
+            <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque
+                vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+        </div>
+
+        <div class="footer__site-map">
+            <h4>Site map</h4>
+            <p>The Story <br>
+                Contact Us <br>
+                Legal</p>
+            <span class="footer__site-map--play">
+                <p>Play online<br>
+                    Play on-site</p>
+            </span>
+        </div>
+        <div class="footer__follow">
+            <h4>Follow us on</h4>
+            <p>Facebook <br>
+                Instagram <br>
+                Twitter</p>
+
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>
