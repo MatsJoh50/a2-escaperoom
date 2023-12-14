@@ -17,10 +17,10 @@ hamburgerMenuLinks.forEach(link => {
 
 ///// FUNKTIONS \\\\\
 
-function onlineLink(){
+function onlineLink() {
   const onlines = document.querySelectorAll(".Online");
   console.log(onlines.length)
-  onlines.forEach(button =>{
+  onlines.forEach(button => {
     button.addEventListener('click', () => {
       window.location.replace('/filter.htm?online')
 
@@ -30,7 +30,7 @@ function onlineLink(){
 }
 onlineLink()
 
-function onsiteLink(){
+function onsiteLink() {
   const onsites = document.querySelectorAll(".OnSite");
   console.log(onsites.length)
   onsites.forEach(button => {
@@ -38,16 +38,18 @@ function onsiteLink(){
       window.location.replace('/filter.htm?onsite')
 
     })
-    
+
   });
   console.log('onsite links done')
 }
 onsiteLink();
 
-function seeAllChallengeLink(){
-  document.querySelector("#seeAll").addEventListener('click', () => window.location.replace('./filter.htm'))
-}
-seeAllChallengeLink();
+// I commented out this code because it made the top three function
+// stop working and only gave an error that returned Null
+// function seeAllChallengeLink(){
+//   document.querySelector("#seeAll").addEventListener('click', () => window.location.replace('./filter.htm'))
+// }
+// seeAllChallengeLink();
 
 async function topThree() {
   const url = 'https://lernia-sjj-assignments.vercel.app/api/challenges';
@@ -62,7 +64,8 @@ async function topThree() {
 }
 
 topThree()
-.catch(err => {
-  apiErrorMsg('.main__slider')}
+  .catch(err => {
+    apiErrorMsg('.main__slider')
+  }
   );
 
