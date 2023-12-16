@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>[ESC] Escape Rooms</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='src/Hover.css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <script type = "module" src='main.js' defer></script>
+    <script type = "module" src='modules.js' defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper">
+            <div class="header__logo" alt="Escape's logo formed by letters E S C"></div>
+            <div class="header__title">
+                <h1>Hacker Escape Rooms</h1>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="nav__large">
+        <ul>
+            <a href="index.html">
+                <li class="Online">Home</li>  <!--I noticed there was no link to home page (If you go to filter no way to go back to home page )-->
+            <a href="./filter.htm?online">
+                <li class="Online">Play online</li>
+            </a>
+            <a href="./filter.htm?onsite">
+                <li class="OnSite">Play on-site</li>
+            </a>
+            <a href="about-us.html">
+                <li>The story</li>
+            </a>
+            <a href="contact-us.html">
+                <li>Contact us</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="nav__mobile">
+        <img class="nav__mobile--openMenu" src="images/openMenu.png">
+        <div class="nav__mobile--bg"></div>
+        <div class="nav__mobile--menu">
+            <ul>
+                <a href="./filter.htm?online" class="hamburgerLink">
+                    <li class="Online">Play online</li>
+                </a>
+                <a href="./filter.htm?onsite" class="hamburgerLink">
+                    <li class="OnSite">Play on-site</li>
+                </a>
+                <a href="#theStory" class="hamburgerLink">
+                    <li>The story</li>
+                </a>
+                <a href="#footer" class="hamburgerLink">
+                    <li>Contact us</li>
+                </a>
+            </ul>
+            <img class="nav__mobile--closeMenu" src="images/close.png" alt="menu close button">
+        </div>
+    </div>
+
+    <img class="heroImage" src="images/header__spacer.png"
+        alt="omnius Hero picture of a man standing by several screens">
+
+    <main class="main">
+        <div class="main__topBtnWrapper--mobile">
+            <a href="./filter.htm?onsite">
+                <div class="OnSite button blue">
+                    <p>On-site challenges</p>
+                </div>
+            </a>
+            <a href="./filter.htm?online" >
+                <div class="Online">
+                    <p class="small-link">Online challenges</p>
+                </div>
+            </a>
+        </div>
+        
+
+     <!--contact form-->
+    <section class="contact-us">
+        
+        <h1 class=contact>Contact us</h1>
+        <div class="all-container">
+           
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18037.753455355483!2d13.024418664732039!3d55.58949618961125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a3f9150a79cf%3A0x29a9e97f20d14b66!2sCentralstation!5e0!3m2!1sen!2sse!4v1702743190295!5m2!1sen!2sse"
+                 width="600" height="450" style="border:0;" allowfullscreen=""
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
+                  <p>Escaperoom@where.som
+                    Tele:9764876956.<br>
+                    Adress : Somewhere on the hill.
+                    UnrealCity, Carzy country.
+                   </p>
+              
+              
+                </div>
+
+             
+          <form class="form">
+
+            <input type="text" id="fname" name="name" placeholder="Your name..">
+            <input type="text" id="lname" name="Email" placeholder="Your Email..">
+            <label for="type">Challenge type</label>
+
+            <select id="type" name="type">
+              <option value="Online-challenge">Online</option>
+              <option value="Onsite-Challenge">Onsite</option>
+            </select>
+         
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <input class="Online button red " id="contact-button"type="submit" value="Submit">
+          </form>
+         
+       </div>
+        </section>
+       
+
+
+        <footer class="footer" id="footer">
+            <div class="footer__compay">
+                <h4>[Esc] Hacker Escape Rooms</h4>
+                <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque
+                    vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+            </div>
+    
+            <div class="footer__site-map">
+                <h4>Site map</h4>
+                <nav class="footer__follow">
+                    <ul>
+                        <a href="About-us.html" class="fa fa-book"> The Story</a>
+                        <a href="contact-us.html" class ="fa fa-mobile"> Contact US</a>
+                        <a href="https://en.wikipedia.org/wiki/Copyright" class="fa fa-copyright"> Legal </a><br><br>
+                        <a href="./filter.htm?online" class="fa fa-pla-y">Play Online</a><br>
+                        <a href="./filter.htm?onsite" class="fa fa-pla-y" > Play On-site</a>
+                    </ul>
+                </nav>
+              
+                    
+               
+            </div>
+           
+    
+            <nav class="footer__follow">
+                <h4>Follow us on</h4>
+                <ul>
+                    <a href="Facebook.com" class="fa fa-facebook"> Facebook</a>
+                    <a href="instagram.com" class ="fa fa-instagram"> Instagram</a>
+                    <a href="x.com" class="fa fa-twitter"> X </a>
+                </ul>
+            </nav>
+        </footer>
+    
+    </body>
+    
+    </html>
