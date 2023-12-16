@@ -1,0 +1,45 @@
+.contact-us{
+   background-color: var(--darkBlue);
+   text-align: center;
+
+}
+.all-container{
+    display: grid;
+    max-width:55vh;
+    margin:0 auto;
+    grid-template-columns: repeat(2,1fr);
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    min-height:10vh;
+    font-size: larger;
+    font-weight:500;
+   
+}
+.contact{color: rgb(255, 255, 255);
+font-size: larger;
+font-weight:900;}
+
+.all-container {
+  border-radius: 30px;
+  background-color: var(--blue);
+  padding: 20px;
+}
+#contact-button{
+border-radius: 10px;
+}
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 90%;
+    flex:1;
+}
+@media screen and (max-width: 500px) {
+   .google-map {
+    display:none;
+   }
+
+}
