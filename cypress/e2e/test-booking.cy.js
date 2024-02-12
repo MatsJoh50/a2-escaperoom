@@ -1,13 +1,15 @@
 describe('Test booking', () => {
 
   it('clicking first "button" and later submit form', () => {
-    cy.visit('http://127.0.0.1:5501/index.html')
-    cy.contains('Take challenge').click({ multiple: true })
-
+    //cy.visit('http://127.0.0.1:5501/index.html')
+    //cy.contains('Take challenge').click({ multiple: true })
+    cy.visit('http://127.0.0.1:5501/filter.htm')
+    cy.contains('Book this room').click({ multiple: true })
+    
     //step 1
     cy.get('[data-cy="booking-date"]')
-      .type('2023-12-10')
-      .and('have.value', '2023-12-10')
+      .type('2024-12-10')
+      .and('have.value', '2024-12-10')
       .should('have.attr', 'required')
 
     cy.contains('Search').click()

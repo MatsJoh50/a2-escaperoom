@@ -44,10 +44,10 @@ function onsiteLink(){
 }
 onsiteLink();
 
-function seeAllChallengeLink(){
+/*function seeAllChallengeLink(){
   document.querySelector("#seeAll").addEventListener('click', () => window.location.replace('./filter.htm'))
 }
-seeAllChallengeLink();
+seeAllChallengeLink();*/
 
 async function topThree() {
   const url = 'https://lernia-sjj-assignments.vercel.app/api/challenges';
