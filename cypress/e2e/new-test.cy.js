@@ -1,14 +1,18 @@
-describe('Test to find a specific elment for filter Challenges', () => {
+import { property } from "cypress/types/lodash";
+
+describe('Test several pages, error message, make a booking & find filter element', () => {
 
 //Set date for bookong challenge
-let today = new Date(); 
+let bookingDate = new Date().toJSON().slice(0, 10);
+
+/*let today = new Date(); 
 let year = today.getFullYear();
 //for this mounth
 //& right format for single digit month & day
-let month = (today.getMonth() + 1).toString().padStart(2, "0");
-let day = today.getDate().toString().padStart(2, "0"); 
+let month = (today.getMonth() + 2).toString().padStart(2, "0");
+let day = today.getDate().toString().padStart(2, "0");  
 
-let bookingDate = year + '-' + month + '-' + day;
+let bookingDate = year + '-' + month + '-' + day;*/
 
   it('start & end at homepage after several interactions', () => {
     cy.visit('http://127.0.0.1:5501/index.html')
@@ -63,7 +67,7 @@ let bookingDate = year + '-' + month + '-' + day;
       .should('have.attr', 'required')
 
     cy.get('[data-cy="e-mail"]')
-      .type('email@.com')
+      //.type('email@.com')
 
     cy.get('[data-cy="time-slots"]')
       .select(['0'])
@@ -75,8 +79,16 @@ let bookingDate = year + '-' + month + '-' + day;
       .should('have.attr', 'required')
 
     //test no submitting when invalid email
+    //& error/validation message
     cy.contains('Submit').click()
 
+    cy.get('[data-cy="e-mail"]')
+    //.invoke('prop', ValidityState)
+    //.should('be.false')
+      .should('have.property', 'ValidationMessage')
+      .should('equal', 'Fyll i det här fältet')
+
+    //proper fill out form
     cy.get('[data-cy="e-mail"]').clear()
       .type('inter@space.com')
       .should('have.attr', 'required')
@@ -94,12 +106,6 @@ let bookingDate = year + '-' + month + '-' + day;
 
     //test to start booking an on-site challenge & show error message
     cy.contains('Book this room').click({ multiple: true })
-
-     //step 1
-     cy.contains('Search').click()
-     cy.get('[data-cy="booking-date"]')
-     //.should('include', 'Fyll i det här fältet')
-
 
      /*cy.get('[data-cy="booking-date"]')
      .then(($input) => {

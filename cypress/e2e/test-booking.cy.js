@@ -1,14 +1,16 @@
 describe('Test booking', () => {
   
 //Set date for bookong challenge
-let today = new Date(); 
+let bookingDate = new Date().toJSON().slice(0, 10);
+
+/*let today = new Date(); 
 let year = today.getFullYear();
 //for this mounth
 //& right format for single digit month & day
 let month = (today.getMonth() + 2).toString().padStart(2, "0");
 let day = today.getDate().toString().padStart(2, "0");  
 
-let bookingDate = year + '-' + month + '-' + day;
+let bookingDate = year + '-' + month + '-' + day;*/
 
   it('clicking first "button" and later submit form', () => {
     cy.visit('http://127.0.0.1:5501/filter.htm')
