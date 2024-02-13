@@ -27,13 +27,13 @@
     <nav class="nav__large">
         <ul>
             <a href="index.html">
-                <li class="Online">Home</li>
+                <li class="Online" data-cy="toHome">Home</li>
                 <!--I noticed there was no link to home page (If you go to filter no way to go back to home page )-->
                 <a href="./filter.htm?online">
                     <li class="Online">Play online</li>
                 </a>
                 <a href="./filter.htm?onsite">
-                    <li class="OnSite">Play on-site</li>
+                    <li class="OnSite" data-cy="onSiteChallenges">Play on-site</li>
                 </a>
                 <a href="about-us.html">
                     <li>The story</li>
@@ -80,9 +80,9 @@
     </div>
     <h2 class="filter__title">Our Challanges</h2>
 
-    <button class="toFilter__bigButton">Filter challenges</button>
+    <button class="toFilter__bigButton" data-cy="filterChallenges">Filter challenges</button>
     <section class="filter hidden">
-        <div class="exitBtn">
+        <div class="exitBtn" data-cy="filterExitBtn">
             <span class="exitBar" id="exit-vert"></span>
             <span class="exitBar" id="exit-horz"></span>
         </div>
@@ -121,12 +121,12 @@
                     </div>
                     <div>to</div>
                     <div class="filter__options--rating--max" aria-label="maxRating" role="meter" aria-valuemin="0"
-                        aria-valuemax="5" aria-valuenow="5">
+                        aria-valuemax="5" aria-valuenow="5" data-cy="ratingMax">
                         <span aria-hidden="true" class="cbMax" id="cbMax-1"></span>
                         <span aria-hidden="true" class="cbMax" id="cbMax-2"></span>
                         <span aria-hidden="true" class="cbMax" id="cbMax-3"></span>
                         <span aria-hidden="true" class="cbMax" id="cbMax-4"></span>
-                        <span aria-hidden="true" class="cbMax" id="cbMax-5"></span>
+                        <span aria-hidden="true" class="cbMax" id="cbMax-5" data-cy="ratingMaxFive"></span>
                     </div>
                 </div>
             </div>
