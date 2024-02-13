@@ -1,15 +1,23 @@
 describe('Test booking', () => {
+  
+//Set date for bookong challenge
+let today = new Date(); 
+let year = today.getFullYear();
+//for this mounth
+//& right format for single digit month & day
+let month = (today.getMonth() + 2).toString().padStart(2, "0");
+let day = today.getDate().toString().padStart(2, "0");  
+
+let bookingDate = year + '-' + month + '-' + day;
 
   it('clicking first "button" and later submit form', () => {
-    //cy.visit('http://127.0.0.1:5501/index.html')
-    //cy.contains('Take challenge').click({ multiple: true })
     cy.visit('http://127.0.0.1:5501/filter.htm')
     cy.contains('Book this room').click({ multiple: true })
     
     //step 1
     cy.get('[data-cy="booking-date"]')
-      .type('2024-12-10')
-      .and('have.value', '2024-12-10')
+      .type(`${bookingDate}`)
+      .and('have.value', `${bookingDate}`)
       .should('have.attr', 'required')
 
     cy.contains('Search').click()
