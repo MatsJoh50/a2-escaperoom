@@ -107,3 +107,9 @@ describe('Test several pages, error message, make a booking & find filter elemen
      .should('equal', 400)
   })
 })
+/////////////////////////////////////////
+//test error message when status 400
+//change data-cy to names with "-" as done before 
+//change to baseURL
+//publish on GitHub Pages & set rigt URL for that
+
