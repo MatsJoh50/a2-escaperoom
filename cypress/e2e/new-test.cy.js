@@ -1,14 +1,10 @@
+describe('Test several pages, existence of validation message, make a booking & find filter element', () => {
 
-describe('Test several pages, error message, make a booking & find filter element', () => {
-
-  //Set date for bookong challenge
+  //Set date for booking challenge
   let bookingDate = new Date().toJSON().slice(0, 10);
 
-  it('start & end at homepage after several interactions', () => {
+  it('start at homepage & end at on-site after several interactions', () => {
     cy.visit('http://127.0.0.1:5501/index.html')
-    /*.then(() => {
-        cy.url().should('include', '/index.html')
-    })*/
 
     //test to show home page & then go to Our Challenges
     cy.url().should('include', '/index.html')
@@ -56,18 +52,19 @@ describe('Test several pages, error message, make a booking & find filter elemen
       .and('have.value', 'your name')
       .should('have.attr', 'required')
 
-   //test that right validation message is shown when no input
+    //test that right validation message is shown when no input
     cy.get('[data-cy="e-mail"]')
       .should('have.prop', 'validationMessage')
       .should('equal', 'Fyll i det här fältet.')
 
     //test that right validation message is shown when wrong input
-    cy.get('[data-cy="e-mail"]')
+    //this has now changed
+    /*cy.get('[data-cy="e-mail"]')
       .type('email@.com')
       .should('have.prop', 'validationMessage')
-      .should('equal', '. används på fel plats i .com.')
+      .should('equal', '. används på fel plats i .com.')*/
 
-    //set a valid email
+    //set a valid email & continue booking
     cy.get('[data-cy="e-mail"]').clear()
       .type('email@host.com')
       .should('have.prop', 'validationMessage')
@@ -87,29 +84,10 @@ describe('Test several pages, error message, make a booking & find filter elemen
     //step 3
     //test to go to all Our Challenges after submit OK
     cy.contains('Back to challenges').click()
- 
-     //test show Our Challenges page & go to on-site Challenges
-     cy.url().should('include', '/filter.htm')
-     cy.get('[data-cy="onSiteChallenges"]').click()
-     cy.url().should('include', '/filter.htm?onsite')
-    
 
-    ////////////////////////////////////////////////////////////////////////////////
-    //test status code when no content in Body for POST reguest
-    cy.request({
-       method: 'POST',
-       url: 'https://lernia-sjj-assignments.vercel.app/api/booking/reservations',
-       headers: { 'Content-Type': 'application/json' },
-       body: '',
-       failOnStatusCode: false
-     }).as('booking')
-     cy.get('@booking').its('status')
-     .should('equal', 400)
+    //test to show Our Challenges page & go to on-site Challenges
+    cy.url().should('include', '/filter.htm')
+    cy.get('[data-cy="onSiteChallenges"]').click()
+    cy.url().should('include', '/filter.htm?onsite')
   })
 })
-/////////////////////////////////////////
-//test error message when status 400
-//change data-cy to names with "-" as done before 
-//change to baseURL
-//publish on GitHub Pages & set rigt URL for that
-

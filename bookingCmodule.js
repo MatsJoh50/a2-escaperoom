@@ -75,6 +75,7 @@ function createFourthModal() {
 
     const headline = document.createElement("h2");
     headline.setAttribute("class", "modal4__headline");
+    headline.setAttribute("data-cy", "no-challenges");
     headline.textContent = "We are sorry. The challenge could not be booked. Please try again.";
 
     const aLink = document.createElement("a");
